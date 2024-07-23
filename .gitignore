@@ -1,0 +1,11 @@
+# Ignore the local environment folder
+env/
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore other unnecessary files
+*.log
+*.csv
