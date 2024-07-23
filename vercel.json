@@ -4,10 +4,6 @@
     {
       "src": "simv3.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "Options Data.csv",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
