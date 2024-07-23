@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 from dash import Dash, dcc, html, Input, Output
 
 # Load the CSV file
-data = pd.read_csv('https://raw.githubusercontent.com/GetHorizontal/optionsdata/main/Options%20Data.csv')
+data = pd.read_csv('https://raw.githubusercontent.com/GetHorizontal/optionsdatacsv/main/Options%20Data.csv')
 
 # Convert date column to datetime for filtering
 data['date'] = pd.to_datetime(data['date'], format='%m/%d/%Y %H:%M')
