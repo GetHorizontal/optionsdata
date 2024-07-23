@@ -1,19 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "simv3.py",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "Options Data.csv",
-            "use": "@vercel/static"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/simv3.py"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "simv3.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "Options Data.csv",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/simv3.py"
+    }
+  ]
 }
