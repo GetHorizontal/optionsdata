@@ -3,7 +3,7 @@ import math
 import plotly.graph_objects as go
 from dash import Dash, dcc, html, Input, Output
 
-# Load the CSV file
+# Load the CSV file from the external URL
 data = pd.read_csv('https://raw.githubusercontent.com/GetHorizontal/optionsdatacsv/main/Options%20Data.csv')
 
 # Convert date column to datetime for filtering
@@ -181,22 +181,22 @@ def update_chart(account_balance, selected_date, selected_ticker, upper_strike, 
 
         # Calculate the final return
         if stop_loss_triggered or take_profit_triggered:
-            cash_to_use = 0.8 * account_balance
-            max_straddles = math.floor(cash_to_use / initial_straddle_price)
-            initial_investment = initial_straddle_price * max_straddles
-            final_value = exit_price * max_straddles
-            net_return = final_value - initial_investment
-            percent_gain_loss = (net_return / initial_investment) * 100
+            cash_to_use = 0.8 * account balance
+            max straddles = math.floor(cash_to_use / initial straddle price)
+            initial investment = initial straddle price * max straddles
+            final value = exit price * max straddles
+            net return = final value - initial investment
+            percent gain loss = (net return / initial investment) * 100
 
-            # Calculate max gain based on max_gain_price
-            max_gain_value = max_gain_price * max_straddles
-            max_gain_net_return = max_gain_value - initial_investment
-            max_gain_percent = (max_gain_net_return / initial_investment) * 100
+            # Calculate max gain based on max gain price
+            max gain value = max gain price * max straddles
+            max gain net return = max gain value - initial investment
+            max gain percent = (max gain net return / initial investment) * 100
 
             # Calculate daily high gain
-            daily_high_value = daily_high_price * max_straddles
-            daily_high_net_return = daily_high_value - initial_investment
-            daily_high_percent = (daily_high_net_return / initial_investment) * 100
+            daily high value = daily high price * max straddles
+            daily high net return = daily high value - initial investment
+            daily high percent = (daily high net return / initial investment) * 100
 
             result = html.Div([
                 html.P(f'Net Return: ${net_return:.2f}', style={'color': 'red'}),
